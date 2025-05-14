@@ -8,13 +8,9 @@ Sean and I also wrote a [methodological note](https://www.documentcloud.org/docu
 
 The data these .do files were designed to operate on are publicly available.
 
-
 ## The data we used:
 
-
-
 1. [The Guacamaya, or CENAPI dataset](https://stopusarmstomexico.org/wp-content/uploads/2024/05/ARMAS-RASTREADAS-DE-EUA_31-12-2018_25-11-2020.xlsx): 24,000 detailed records of firearms seized by The Mexican National Center for Planning, Analysis and Information for Combating Crime	(CENAPI) from December 2018 through November 2020 and compiled by Mexico’s Attorney General office (FGR). The U.S. ATF had traced around 15,000 of these to origins in the U.S., including 7,000 to a specific gun dealer.
-
 
 	Source: Emails obtained by Mexican authorities and leaked by the hacktivist organization Guacamaya in September 2022. The data is available through the non-profit repository of hacked and leaked data [Distributed Denial of Secrets](https://ddosecrets.com/article/secretaria-de-la-defensa-nacional-de-mexico) and is also [posted by Stop U.S. Arms to Mexico](https://stopusarmstomexico.org/wp-content/uploads/2024/05/ARMAS-RASTREADAS-DE-EUA_31-12-2018_25-11-2020.xlsx).
 
@@ -42,9 +38,7 @@ The data these .do files were designed to operate on are publicly available.
 
 	[https://www.atf.gov/resource-center/docs/report/2021-firearms-commerce-report/download](https://www.atf.gov/resource-center/docs/report/2021-firearms-commerce-report/download)
 
-
 	[https://www.atf.gov/firearms/docs/report/2022-final-afmer/download](https://www.atf.gov/firearms/docs/report/2022-final-afmer/download)
-
 
 	Source: ATF
 
@@ -52,22 +46,16 @@ The data these .do files were designed to operate on are publicly available.
 
 	[https://www.atf.gov/resource-center/data-statistics](https://www.atf.gov/resource-center/data-statistics)
 
-
 	[https://www.atf.gov/file/144886/download](https://www.atf.gov/file/144886/download)
-
 
 	[https://www.atf.gov/resource-center/firearms-trace-data-mexico-2015-2020](https://www.atf.gov/resource-center/firearms-trace-data-mexico-2015-2020)
 
-
 	[https://www.atf.gov/resource-center/firearms-trace-data-mexico-2017-2022](https://www.atf.gov/resource-center/firearms-trace-data-mexico-2017-2022)
-
 
 	[https://www.atf.gov/resource-center/firearms-trace-data-mexico-2018-2023](https://www.atf.gov/resource-center/firearms-trace-data-mexico-2018-2023)
 
 
-
 ## Our findings:
-
 
 ### Total flow
 
@@ -84,8 +72,6 @@ We used simple frequency (i.e. count) analysis to show that the most destructive
 
 **Analysis files for this:**
 
-
-
 * Conversation - US-MX guns - FFLid - Chain Stores.do
 * Conversation - US-MX guns - FFLid - Cities.do
 * Conversation - US-MX guns - FFLid.do
@@ -99,8 +85,6 @@ We used log-log OLS and Poisson regression analysis to show that an increase in 
 
 **Analysis files for this:**
 
-
-
 * Conversation - US-MX guns - homicides & guns - analysis.do
 
 
@@ -109,8 +93,6 @@ We used log-log OLS and Poisson regression analysis to show that an increase in 
 We used 2-stage least squares regression analysis to show that the flow drives an arms race between criminals and Mexican law enforcement to the benefit of a U.S. gun industry that profits on sales from both ends.
 
 **Analysis files for this:**
-
-
 
 * Conversation - US-MX guns - police orders base caliber - data cleaning.do
 * Conversation - US-MX guns - police orders base caliber - analysis.do
@@ -122,8 +104,6 @@ We used survival analysis to show that state-level firearms sales laws can speed
 
 **Analysis files for this:**
 
-
-
 * Conversation - US-MX guns - court cases - survival analysis.do
 
 
@@ -133,8 +113,6 @@ We used logistics, negative binomial, and log-log regression approaches to show 
 
 **Analysis files for this:**
 
-
-
 * Conversation - US-MX guns - ATF Demand 2 overlap.do
 * Conversation - US-MX guns - ATF citation policy - analysis.do
 
@@ -143,8 +121,6 @@ We used logistics, negative binomial, and log-log regression approaches to show 
 
 Run the four data creation / cleaning files first and preferably in the following order:
 
-
-
 1. Conversation - US-MX guns - SEDENA - data cleaning.do
 2. Conversation - US-MX guns - Cenapi - data creation.do
 3. Conversation - US-MX guns - ATF citation policy - data creation.do
@@ -152,15 +128,13 @@ Run the four data creation / cleaning files first and preferably in the followin
 5. Conversation - US-MX guns - police orders base caliber - data cleaning.do
 6. Conversation - US-MX guns - capture-recapture - data creation.do
 
+
 The following file will be invoked by the data creation and cleaning files to standardized major manufacturer names, but need not be run separately:
-
-
 
 * Conversation - US-MX guns - manufcorrect.do
 
-Then run analysis files as needed.
 
-
+Then run analysis files as needed:
 
 * Conversation - US-MX guns - ATF citation policy - analysis.do
 * Conversation - US-MX guns - ATF coverage.do
